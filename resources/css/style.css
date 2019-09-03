@@ -13,6 +13,10 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+body {
+  overflow: hidden;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -26,4 +30,71 @@ html {
 img {
   display: block;
   margin: auto;
+}
+
+.nube {
+  width: 200px;
+  height: 150px;
+  background-size: 100% 100%;
+  position: absolute;
+}
+
+.nube:nth-child(1) {
+  margin-top: 100px;
+  background-image: url(./img/nube1.png);
+  animation: movimiento1 30s infinite;
+}
+
+.nube:nth-child(2) {
+  margin-top: 200px;
+  background-image: url(./img/nube3.png);
+  animation: movimiento2 30s infinite;
+}
+
+.nube:nth-child(3) {
+  margin-top: 300px;
+  background-image: url(./img/nube1.png);
+  animation: movimiento1 30s infinite;
+}
+
+.nube:nth-child(4) {
+  margin-top: 400px;
+  background-image: url(./img/nube1.png);
+  animation: movimiento3 30s infinite;
+}
+
+.nube:nth-child(5) {
+  margin-top: 500px;
+  background-image: url(./img/nube2.png);
+  animation: movimiento2 30s infinite;
+}
+
+@keyframes movimiento1 {
+  from {
+    margin-left: 60%;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes movimiento2 {
+  from {
+    margin-left: 10%;
+  }
+
+  to {
+    margin-left: 60%;
+  }
+}
+
+@keyframes movimiento3 {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: 60%;
+  }
 }
